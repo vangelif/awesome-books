@@ -1,30 +1,65 @@
 let bookListArray = [];
 
-const targetBody = document.querySelector('body');
+const submitButton = document.getElementById("add");
+const bookTitle = document.getElementById("book-title");
+const author = document.getElementById("author");
+const form = document.getElementById("form");
+const error = document.getElementById("error");
 
-// Adding a Book // 
+// Adding a Book //
 const addBook = (title, author) => {
-  const book = {title, author};
-  bookListArray.push(book);
-  
-displayBooks();
+  const book = { title, author };
+  const checkBooks = bookListArray.find((book) => book.title === title);
+  if (checkBooks) {
+    error.innerText = "Book with title exists!!";
+  } else {
+    error.innerHTML = "";
+    bookListArray.push(book);
+    displayBooks();
+  }
 };
 
 // person 2
-const displayBookList = document.getElementById('table');
+const displayBookList = document.getElementById("table");
 
 // Display Book List with author and remove button // person 2
 const displayBooks = () => {
   displayBookList.innerHTML = ``;
   bookListArray.forEach((book) => {
-    const bookItem = document.createElement('tbody');
+    const bookItem = document.createElement("tbody");
     bookItem.innerHTML = `
-      <tr><td>${book.title}</td></tr>
-      <tr><td>${book.author}</td></tr>
-      <tr><td><button class="remove" onclick="removeBook('${book.title}')">Remove</button></td> </tr>
-      <hr>`;
+      <div>
+        <p>${book.title}</p>
+        <p>${book.author}</p>
+        <button class="remove" id=${book.title}>Remove</button>
+      <div>
+      <hr/>`;
     displayBookList.appendChild(bookItem);
   });
 };
-
+error.innerHTML = "";
 displayBooks();
+
+const deleteBook = (title) => {
+  bookListArray = bookListArray.filter((it) => it.title !== title);
+  displayBooks();
+};
+
+// Document listener for removing book
+document.addEventListener("click", (e) => {
+  const deleteButton = e.target.closest(".remove");
+  if (deleteButton) {
+    deleteBook(deleteButton.id);
+  }
+});
+
+//add book from form
+submitButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (bookTitle.value.length === 0 || author.value.length === 0) {
+    error.innerText = "Fileds cannot be empty!";
+  } else {
+    addBook(bookTitle.value, author.value);
+    form.reset();
+  }
+});
