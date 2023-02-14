@@ -7,12 +7,12 @@ const form = document.getElementById("form");
 const error = document.getElementById("error");
 
 const updateLocalStorage = (data) => {
-  localStorage.setItem('storage-book', JSON.stringify(data));  
-} 
+  localStorage.setItem("storage-book", JSON.stringify(data));
+};
 
 const getLocalStorage = () => {
-  return JSON.parse(localStorage.getItem('storage-book'));
-}
+  return JSON.parse(localStorage.getItem("storage-book"));
+};
 
 // Display Book List with author and remove button // person 2
 const displayBooks = () => {
@@ -30,11 +30,11 @@ const displayBooks = () => {
   });
 };
 
-const initialize = () => {  
+const initialize = () => {
   bookListArray = getLocalStorage() || [];
   // console.log(bookListArray)
   displayBooks();
-}
+};
 
 // Adding a Book //
 const addBook = (title, author) => {

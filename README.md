@@ -42,9 +42,9 @@
 <details>
   <summary>Javascript</summary>
   <ul>
-    <li><a href="https://html.com/css/#What_is_CSS">script.css</a></li>
+    <li><a href="https://www.javascripttutorial.net/javascript-dom/document-object-model-in-javascript/">script.js</a></li>
   </ul>
-</details>
+</details><br>
 
 ### Key Features <a name="key-features"></a>
 
