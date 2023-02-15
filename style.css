@@ -7,37 +7,37 @@
   color: red;
 }
 
-body{
+body {
   width: 100%;
 }
 
-section{
+section {
   width: 60%;
-  margin:30px auto;
+  margin: 30px auto;
 }
 
-table{
+table {
   width: 100%;
-  border:1px solid black;
+  border: 1px solid black;
   border-collapse: collapse;
 }
 
-tr td{
+tr td {
   padding: 0.2rem;
 }
 
-tr:nth-child(even){
-background-color:rgb(180, 176, 176);
+tr:nth-child(even) {
+  background-color: rgb(180, 176, 176);
 }
 
-input{
+input {
   width: 100%;
-  padding:0.2rem;
+  padding: 0.2rem;
   display: block;
-  margin-block:1rem;
+  margin-block: 1rem;
 }
 
-button{
-  padding:0.3rem;
+button {
+  padding: 0.3rem;
   float: right;
 }

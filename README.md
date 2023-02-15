@@ -18,7 +18,6 @@
 
 > Awesome Books is a website which allows a user to add and remove the collection of books from a BookList.
 
-
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
