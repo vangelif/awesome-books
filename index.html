@@ -10,26 +10,20 @@
 
   <body>
     <section>
-      <h1>Awesome Books</h1>
-      <div id="table"></div>
+      <h1>All Awesome Books</h1>
+      <table>
+        <tbody id="table"></tbody>
+      </table>
+    </section>
+    <section id="book-form">
+      <h2>Add a new Book</h2><hr>      
       <form id="form">
         <p id="error"></p>
-        <input
-          id="book-title"
-          type="text"
-          placeholder="Title"
-          required
-        /><br /><br />
-        <input
-          id="author"
-          type="name"
-          placeholder="Author"
-          required
-        /><br /><br />
+        <input id="book-title" type="text" placeholder="Title" required />
+        <input id="author" type="name" placeholder="Author" required />
         <button type="submit" id="add">Add</button>
       </form>
     </section>
-
     <script src="script.js"></script>
   </body>
 </html>

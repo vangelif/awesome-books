@@ -6,3 +6,38 @@
 #error {
   color: red;
 }
+
+body {
+  width: 100%;
+}
+
+section {
+  width: 60%;
+  margin: 30px auto;
+}
+
+table {
+  width: 100%;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+tr td {
+  padding: 0.2rem;
+}
+
+tr:nth-child(even) {
+  background-color: rgb(180, 176, 176);
+}
+
+input {
+  width: 100%;
+  padding: 0.2rem;
+  display: block;
+  margin-block: 1rem;
+}
+
+button {
+  padding: 0.3rem;
+  float: right;
+}
