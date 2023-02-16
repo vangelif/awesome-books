@@ -9,6 +9,54 @@
 
 body {
   width: 100%;
+  border: 3px solid #000;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 5rem;
+  margin: 0.2rem 3rem;
+  border: 3px solid #000;
+}
+
+.logo {
+  padding: 0.2rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.menu {
+  display: flex;
+  gap: 1rem;
+}
+
+li {
+  padding: 0.2rem 0;
+  list-style-type: none;
+}
+
+li:nth-child(2) {
+  padding: 0.2rem 1.5rem;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+
+a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  color: blue;
+  transform: scale(1.2);
+}
+
+li a {
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 section {
@@ -40,4 +88,22 @@ input {
 button {
   padding: 0.3rem;
   float: right;
+}
+
+footer {
+  padding: 0.5rem 5rem;
+  margin: 5rem 3rem 0.2rem;
+  border: 3px solid #000;
+}
+
+footer a {
+  text-align: left;
+  padding: 0.2rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+footer a i {
+  font-size: 1rem;
+  padding: 0 0.2rem;
 }
