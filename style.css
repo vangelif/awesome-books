@@ -68,20 +68,22 @@ a:hover {
 
 section {
   width: 60%;
-  margin: 30px auto;
+  margin: 3rem auto;
 }
 
 h1 {
   font-size: 3rem;
+  padding-bottom: 1.5rem;
 }
 
 h2 {
   font-size: 2rem;
+  text-align: center;
 }
 
 table {
   width: 100%;
-  border: 1px solid black;
+  border: 3px solid black;
   border-collapse: collapse;
 }
 
@@ -98,6 +100,7 @@ input {
   padding: 0.2rem;
   display: block;
   margin-block: 1rem;
+  border: 3px solid black;
 }
 
 button {
@@ -108,17 +111,17 @@ button {
 #contact-info > p,
 #contact-info > li {
   font-size: 1.2rem;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+#contact-info > ul {
+  margin-left: 2rem;
 }
 
 #contact-info > ul > li {
   list-style: circle;
-}
-
-#contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  align-items: center;
+  padding: 0.4rem 0;
 }
 
 footer {
