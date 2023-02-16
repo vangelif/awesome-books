@@ -52,16 +52,13 @@ let bookListArray = books.getBook();
 
 const displayBooks = () => {
   displayBookList.innerHTML = '';
-  bookListArray?.forEach((book) => {
-    displayBookList.insertAdjacentHTML(
-      'beforeend',
-      `
-      <tr>
+  bookListArray?.forEach((book) => displayBookList.insertAdjacentHTML(
+    'beforeend',
+    `<tr>
         <td>${book.title} by ${book.author}</td>
         <td><button class="remove" id=${book.id}>Remove</button></td>
       </tr>`,
-    );
-  });
+  ));
 };
 
 // hide sections
