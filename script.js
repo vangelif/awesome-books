@@ -52,7 +52,7 @@ let bookListArray = books.getBook();
 
 const displayBooks = () => {
   displayBookList.innerHTML = '';
-  bookListArray.forEach((book) => {
+  bookListArray?.forEach((book) => {
     displayBookList.insertAdjacentHTML(
       'beforeend',
       `
