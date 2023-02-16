@@ -4,6 +4,15 @@ const author = document.getElementById('author');
 const form = document.getElementById('form');
 const error = document.getElementById('error');
 const displayBookList = document.getElementById('table');
+
+const listSection = document.getElementById('list');
+const newBookSection = document.getElementById('book-form');
+const contactSection = document.getElementById('contact-info');
+
+const listLink = document.getElementById('list-link');
+const addNewLink = document.getElementById('add-new-link');
+const contactLink = document.getElementById('contact-link');
+
 // Book class
 class Book {
   constructor() {
@@ -55,7 +64,21 @@ const displayBooks = () => {
   });
 };
 
-displayBooks();
+// hide sections
+const hideSections = () => {
+  listSection.style.display = 'none';
+  newBookSection.style.display = 'none';
+  contactSection.style.display = 'none';
+};
+
+// operations to happen when page loads
+const initialize = () => {
+  hideSections();
+  listSection.style.display = 'block';
+  displayBooks();
+};
+
+initialize();
 
 // add book from form
 submitButton.addEventListener('click', (e) => {
@@ -75,6 +98,8 @@ submitButton.addEventListener('click', (e) => {
     error.innerHTML = '';
     books.addBook(author.value, bookTitle.value);
     bookListArray = books.getBook();
+    hideSections();
+    listSection.style.display = 'block';
     displayBooks();
   }
   form.reset();
@@ -88,4 +113,22 @@ document.addEventListener('click', (e) => {
     bookListArray = books.getBook();
     displayBooks();
   }
+});
+
+listLink.addEventListener('click', (e) => {
+  e.preventDefault();
+  hideSections();
+  listSection.style.display = 'block';
+});
+
+contactLink.addEventListener('click', (e) => {
+  e.preventDefault();
+  hideSections();
+  contactSection.style.display = 'block';
+});
+
+addNewLink.addEventListener('click', (e) => {
+  e.preventDefault();
+  hideSections();
+  newBookSection.style.display = 'block';
 });
