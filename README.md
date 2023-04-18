@@ -33,23 +33,23 @@
 This project is built using HTML, CSS and JavaScript.
 
 <details>
-  <summary>HTML</summary>
+  <summary>Markup Language</summary>
   <ul>
-    <li><a href="https://html.com/#What_is_HTML">index.html</a></li>
+    <li><a href="https://html.spec.whatwg.org/">HTML</a></li>
   </ul>
 </details>
 
 <details>
-  <summary>CSS</summary>
+  <summary>Style Sheet Language</summary>
   <ul>
-    <li><a href="https://html.com/css/#What_is_CSS">style.css</a></li>
+    <li><a href="https://www.w3.org/TR/CSS/#css">CCS</a></li>
   </ul>
 </details>
 
 <details>
-  <summary>Javascript</summary>
+<summary>Scipting Language</summary>
   <ul>
-    <li><a href="https://www.javascripttutorial.net/javascript-dom/document-object-model-in-javascript/">script.js</a></li>
+    <li><a href="https://www.javascript.com/">JAVASCRIPT</a></li>
   </ul>
 </details>
 
